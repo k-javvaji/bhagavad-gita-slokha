@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BhagavadGita Slokham Meekosam</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+	//Verse count per chapter
+		const versesPerChapter = {
+			1: 47, 2: 72, 3: 43, 4: 42, 5: 29, 6: 47,
+			7: 30, 8: 28, 9: 34, 10: 42, 11: 55, 12: 20,
+			13: 35, 14: 27, 15: 20, 16: 24, 17: 28, 18: 78
+		};
+		
+		window.onload = function () {
+			const chapter = Math.floor(Math.random() * 18) + 1;
+			const Verse = Math.floor(Math.random() * versesPerChapter[chapter]) + 1;
+			window.location.href = `https://www.holy-bhagavad-gita.org/chapter/${chapter}/verse/${Verse}/te/`;
+		};
+	</script>
+</head>
+<body>
+	<p style="text-align:center; margin-top:40px;">
+		Redirecting to a random Bhagavad Gita Sloka....
+	</p>
+</body>
+</html>
