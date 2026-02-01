@@ -71,12 +71,12 @@
       13: 35, 14: 27, 15: 20, 16: 24, 17: 28, 18: 78
     };
 
-    let seconds = 3;
+    let seconds = 2;
 
     function redirectToSloka() {
       const chapter = Math.floor(Math.random() * 18) + 1;
       const verse = Math.floor(Math.random() * versesPerChapter[chapter]) + 1;
-      const url = `https://www.holy-bhagavad-gita.org/chapter/${chapter}/verse/${verse}`;
+      const url = `https://www.holy-bhagavad-gita.org/chapter/${chapter}/verse/${verse}/te`;
       window.location.href = url;
     }
 
@@ -88,7 +88,7 @@
         seconds--;
         timer.textContent = seconds;
 
-        if (seconds === 2) {
+        if (seconds === 1) {
           skipBtn.style.display = "inline-block";
         }
 
@@ -122,7 +122,7 @@
 	</div>
 
 	<div class="countdown">
-		శ్లోకం తెరవబడుతుంది <span id="timer">3</span> సెకన్లలో…
+		శ్లోకం తెరవబడుతుంది <span id="timer">2</span> సెకన్లలో…
 	</div>
 
 	<button id="skip" class="skip-btn" onclick="redirectToSloka()">
